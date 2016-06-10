@@ -24,12 +24,14 @@ set background=dark
 set tabstop=4
 set softtabstop=4
 set expandtab
+set shiftwidth=4
 "---------------------------------------
 
 " UI
 "---------------------------------------
 " show line numbers
 set number
+
 " show command in bottom bar
 set showcmd
 
@@ -110,4 +112,8 @@ map <leader>tm :tabmove
 
 " allow backspacing in insert mode
 set bs=indent,eol,start
+
+" faster single line tab
+map <leader>k v>
+map <leader>j v<
 "---------------------------------------
