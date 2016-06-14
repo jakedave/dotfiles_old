@@ -116,4 +116,7 @@ set bs=indent,eol,start
 " faster single line tab
 map <leader>k v>
 map <leader>j v<
+
+" faster move window to new tab
+map <leader>w <C-W>T
 "---------------------------------------
