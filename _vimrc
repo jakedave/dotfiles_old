@@ -4,7 +4,7 @@
 "   from several different sources
 "---------------------------------------
 
-
+"---------------------------------------
 " SYNTAX
 "---------------------------------------
 " enable syntax processing
@@ -16,8 +16,9 @@ set title
 " colors
 colorscheme desert
 set background=dark
-"---------------------------------------
 
+
+"---------------------------------------
 " SPACE & TABS
 "---------------------------------------
 " Tab == 4 spaces
@@ -25,8 +26,9 @@ set tabstop=4
 set softtabstop=4
 set expandtab
 set shiftwidth=4
-"---------------------------------------
 
+
+"---------------------------------------
 " UI
 "---------------------------------------
 " show line numbers
@@ -46,8 +48,9 @@ set wildmenu
 
 " highlight matching [{()}]
 set showmatch
-"---------------------------------------
 
+
+"---------------------------------------
 " SEARCHING & SPELLING
 "---------------------------------------
 " search as characters are entered
@@ -75,21 +78,23 @@ set spell spelllang=en_us
 set complete+=kspell
 
 " Map spell correct because keystrokes
-map <leader>z z=  
-"---------------------------------------
+map z z=  
 
+
+"---------------------------------------
 "FOLDING
 "---------------------------------------
 
-"---------------------------------------
 
+"---------------------------------------
 "MOVEMENT
 "---------------------------------------
 " Treat long lines as break lines
 map j gj
 map k gk
-"---------------------------------------
 
+
+"---------------------------------------
 "MISC KEY BINDINGS
 "---------------------------------------
 " leader == space
@@ -119,4 +124,6 @@ map <leader>j v<
 
 " faster move window to new tab
 map <leader>w <C-W>T
-"---------------------------------------
+
+" faster select all
+map <leader>a ggVG
