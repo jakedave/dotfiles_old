@@ -157,6 +157,10 @@ nnoremap <C-H> <C-W><C-H>
 " faster move window to new tab
 nnoremap <leader>w <C-W>T
 
+" faster window resizing
+nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
+nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
+nnoremap <leader>= <C-S-w>=
 
 "---------------------------------------
 "TAB MANAGEMENT
