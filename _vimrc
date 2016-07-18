@@ -1,31 +1,24 @@
-"---------------------------------------
+"-----------------------------------------
 " Author: Jake David
 " Desc: First vimrc... Compiled 
 "   from several different sources
-"---------------------------------------
+"-----------------------------------------
 
-
-"---------------------------------------
-" SYNTAX
-"---------------------------------------
+" ================ SYNTAX ================
 " Enable syntax processing
 syntax enable
 
 " Show file in title bar
 set title
 
-"---------------------------------------
-" SPACE & TABS
-"---------------------------------------
+" ============= SPACE & TABS =============
 " Tab == 4 spaces
 set tabstop=4
 set softtabstop=4
 set expandtab
 set shiftwidth=4
 
-"---------------------------------------
-" UI
-"---------------------------------------
+" ================== UI ==================
 " Show line numbers
  set number
 
@@ -57,9 +50,7 @@ set statusline +=%2*/%L%*               "total lines
 set statusline +=%1*%4v\ %*             "virtual column number
 set statusline +=%2*0x%04B\ %*          "character under cursor
 
-"---------------------------------------
-" SEARCHING & SPELLING
-"---------------------------------------
+" ========= SEARCHING & SPELLING =========
 " Search as characters are entered
 set incsearch
 
@@ -86,16 +77,12 @@ set complete+=kspell
 " Auto-correct to best word
 nmap <Leader>z 1z=
 
-"---------------------------------------
-"MOVEMENT
-"---------------------------------------
+" =============== MOVEMENT ===============
 " Treat long lines as break lines
 map j gj
 map k gk
 
-"---------------------------------------
 "MISC KEY BINDINGS
-"---------------------------------------
 " Leader == space
 let mapleader=" "
 
@@ -124,9 +111,7 @@ inoremap jk <esc>
 " Fast yank to end of line, no carriage return
 nnoremap <leader>y y$
 
-"---------------------------------------
-"WINDOW NAVIGATION
-"---------------------------------------
+" ========== WINDOW NAVIGATION ===========
 " Skip control+w to switch windows
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -141,18 +126,14 @@ nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
 nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
 nnoremap <leader>= <C-S-w>=
 
-"---------------------------------------
-"TAB MANAGEMENT
-"---------------------------------------
+" ============ TAB MANAGEMENT ============
 " Self-Explanatory
 nnoremap <leader>tn :tabnew<cr>
 nnoremap <leader>to :tabonly<cr>
 nnoremap <leader>tc :tabclose<cr>
 nnoremap <leader>tm :tabmove
 
-"---------------------------------------
-"SESSION OPTIONS
-"---------------------------------------
+" =========== SESSION OPTIONS ============
 " Open session windows in the way they
 "   were left
 set sessionoptions+=resize,winpos
@@ -161,9 +142,7 @@ set sessionoptions+=resize,winpos
 autocmd VIMEnter * :source C:/UAT/vim/session.vim
 autocmd VIMLeave * :mksession! C:/UAT/vim/session.vim
 
-"---------------------------------------
-"FUNCTIONS
-"---------------------------------------
+" ============== FUNCTIONS ===============
 " Source vimrc upon changes to file 
 augroup myvimrc" }}}
     au!
