@@ -170,13 +170,16 @@ augroup myvimrc" }}}
     au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYVIMRC | endif
 augroup END
 
-"Get colors
+" Get colors
 hi clear
 if exists("syntax_on")
     syntax reset
 endif
-
 let g:colors_name = "solarized"
 set background=dark
 :colorscheme solarized
 
+" Remember cursor position from last session
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
