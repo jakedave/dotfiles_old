@@ -1,24 +1,29 @@
-"-----------------------------------------
+" Name: vimrc
 " Author: Jake David
-" Desc: First vimrc... Compiled 
-"   from several different sources
-"-----------------------------------------
-
-" ================ SYNTAX ================
+" License: OSI approved MIT license
+" Created: 2016 May
+" Modified: 2016 Jul 19
+"
+" ================ SYNTAX ================"{{{
 " Enable syntax processing
 syntax enable
 
 " Show file in title bar
 set title
-
-" ============= SPACE & TABS =============
+"}}}
+" ============= SPACE & TABS ============="{{{
 " Tab == 4 spaces
 set tabstop=4
 set softtabstop=4
 set expandtab
 set shiftwidth=4
-
-" ================== UI ==================
+"}}}
+" =============== FOLDING ================"{{{
+" Toggle folds with F9
+inoremap <F9> <C-O>za
+nnoremap <F9> za
+"}}}
+" ================== UI =================="{{{
 " Show line numbers
  set number
 
@@ -49,8 +54,8 @@ set statusline +=%1*%=%5l%*             "current line
 set statusline +=%2*/%L%*               "total lines
 set statusline +=%1*%4v\ %*             "virtual column number
 set statusline +=%2*0x%04B\ %*          "character under cursor
-
-" ========= SEARCHING & SPELLING =========
+"}}}
+" ========= SEARCHING & SPELLING ========="{{{
 " Search as characters are entered
 set incsearch
 
@@ -76,13 +81,13 @@ set complete+=kspell
 
 " Auto-correct to best word
 nnoremap <Leader>z 1z=
-
-" =============== MOVEMENT ===============
+"}}}
+" =============== MOVEMENT ==============="{{{
 " Treat long lines as break lines
 map j gj
 map k gk
-
-" ========== MISC KEY BINDINGS ===========
+"}}}
+" ========== MISC KEY BINDINGS ==========="{{{
 " Leader == space
 let mapleader=" "
 
@@ -110,8 +115,8 @@ inoremap jk <esc>
 
 " Fast yank to end of line, no carriage return
 nnoremap <leader>y y$
-
-" ========== WINDOW NAVIGATION ===========
+"}}}
+" ========== WINDOW NAVIGATION ==========="{{{
 " Skip control+w to switch windows
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -125,15 +130,15 @@ nnoremap <leader>w <C-W>T
 nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
 nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
 nnoremap <leader>= <C-S-w>=
-
-" ============ TAB MANAGEMENT ============
+"}}}
+" ============ TAB MANAGEMENT ============"{{{
 " Self-Explanatory
 nnoremap <leader>tn :tabnew<cr>
 nnoremap <leader>to :tabonly<cr>
 nnoremap <leader>tc :tabclose<cr>
 nnoremap <leader>tm :tabmove
-
-" =========== SESSION OPTIONS ============
+"}}}
+" =========== SESSION OPTIONS ============"{{{
 " Open session windows in the way they
 "   were left
 set sessionoptions+=resize,winpos
@@ -141,8 +146,8 @@ set sessionoptions+=resize,winpos
 " Auto-save/load session
 autocmd VIMEnter * :source C:/UAT/vim/session.vim
 autocmd VIMLeave * :mksession! C:/UAT/vim/session.vim
-
-" ============== FUNCTIONS ===============
+"}}}
+" ============== FUNCTIONS ==============="{{{
 " Source vimrc upon changes to file 
 augroup myvimrc" 
     au!
@@ -162,3 +167,29 @@ set background=dark
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
+"}}}
+" =============== LICENSE ================"{{{
+" ---------------------------------------------------------------------
+"
+" Copyright (c) 2016 Jake David
+"
+" Permission is hereby granted, free of charge, to any person obtaining a copy
+" of this software and associated documentation files (the "Software"), to deal
+" in the Software without restriction, including without limitation the rights
+" to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+" copies of the Software, and to permit persons to whom the Software is
+" furnished to do so, subject to the following conditions:
+"
+" The above copyright notice and this permission notice shall be included in
+" all copies or substantial portions of the Software.
+"
+" THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+" IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+" FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+" AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+" LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+" OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+" THE SOFTWARE.
+"
+" vim:foldmethod=marker:foldlevel=0
+"}}}
