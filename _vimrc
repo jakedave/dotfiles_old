@@ -75,14 +75,14 @@ set spell spelllang=en_us
 set complete+=kspell
 
 " Auto-correct to best word
-nmap <Leader>z 1z=
+nnoremap <Leader>z 1z=
 
 " =============== MOVEMENT ===============
 " Treat long lines as break lines
 map j gj
 map k gk
 
-"MISC KEY BINDINGS
+" ========== MISC KEY BINDINGS ===========
 " Leader == space
 let mapleader=" "
 
@@ -144,7 +144,7 @@ autocmd VIMLeave * :mksession! C:/UAT/vim/session.vim
 
 " ============== FUNCTIONS ===============
 " Source vimrc upon changes to file 
-augroup myvimrc" }}}
+augroup myvimrc" 
     au!
     au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYVIMRC | endif
 augroup END
