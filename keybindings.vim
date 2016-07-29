@@ -13,6 +13,10 @@ nnoremap <C-H> <C-W><C-H>
 " Faster move window to new tab
 nnoremap <leader>w <C-W>T
 
+" Fast [vertical] split
+nnoremap <leader>vsp :vsp<cr>
+nnoremap <leader>sp :sp<cr>
+
 " Faster window resizing
 nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
 nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
@@ -23,6 +27,8 @@ nnoremap <leader>= <C-S-w>=
 nnoremap <leader>tn :tabnew<cr>
 nnoremap <leader>to :tabonly<cr>
 nnoremap <leader>tc :tabclose<cr>
+nnoremap <leader>tl :tablast<cr>
+nnoremap <leader>tt :tabfirst<cr>
 nnoremap <leader>tm :tabmove
 "}}}
 " =============== FOLDING ================ "{{{
@@ -56,9 +62,6 @@ nnoremap <leader>i gg=G''
 " Faster select all
 nnoremap <leader>a ggVG
 
-" Faster esc from insert
-inoremap jk <esc>
-
 " Fast yank to end of line, no carriage return
 nnoremap <leader>y y$
 
@@ -72,5 +75,8 @@ nnoremap <leader>d d$
 " sv to source vimrc
 :nnoremap <leader>sv :source $MYVIMRC<cr>
 
+" Fast esc [and save] from insert
+inoremap jk <esc>
+inoremap jj <esc>:w!<cr> 
 " vim:foldmethod=marker:foldlevel=0
 "}}}

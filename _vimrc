@@ -26,6 +26,13 @@ set tabstop=4
 set softtabstop=4
 set expandtab
 set shiftwidth=4
+
+" Auto/smart indent
+set ai
+set si
+
+" Wrap lines
+set wrap
 "}}}
 " =============== FOLDING ================ "{{{
 " Close fold after scrolling out of it
@@ -50,6 +57,9 @@ set wildmenu
 
 " Highlight matching [{()}]
 set showmatch
+
+" Get rid of '@' at end of documents
+set display+=lastline
 
 " Status line for multi-windows
 set statusline=
@@ -97,7 +107,7 @@ let mapleader=" "
 " Map ':' to ';' because speed
 nnoremap ; :
 "}}}
-" ============ KEY BINDINGS ============= "{{{
+" ============= KEY BINDINGS ============= "{{{
 :source C:/Users/davidj/vimfiles/settings/keybindings.vim
 "}}}
 " =========== SESSION OPTIONS ============ "{{{
@@ -113,6 +123,9 @@ autocmd VIMLeave * :mksession! C:/UAT/vim/session.vim
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
+
+" Auto change file on outside change
+set autoread
 "}}}
 " ============== FUNCTIONS =============== "{{{
 " Source vimrc upon changes to file 
