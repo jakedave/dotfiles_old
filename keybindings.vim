@@ -21,6 +21,10 @@ nnoremap <leader>sp :sp<cr>
 nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
 nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
 nnoremap <leader>= <C-S-w>=
+
+" Swap buffer maintain window
+nnoremap <silent> <leader>mm :call MarkWindowSwap()<CR>
+nnoremap <silent> <leader>pm :call DoWindowSwap()<CR>
 "}}}
 " ============ TAB MANAGEMENT ============ "{{{
 " Self-Explanatory
@@ -78,5 +82,8 @@ nnoremap <leader>d d$
 " Fast esc [and save] from insert
 inoremap jk <esc>
 inoremap jj <esc>:w!<cr> 
+
+" Fast clear registers
+nnoremap <leader>cr :ClearRegisters<cr>
 " vim:foldmethod=marker:foldlevel=0
 "}}}
