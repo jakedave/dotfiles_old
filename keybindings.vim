@@ -24,7 +24,7 @@ nnoremap <leader>= <C-S-w>=
 
 " Swap buffer maintain window
 nnoremap <silent> <leader>mm :call MarkWindowSwap()<CR>
-nnoremap <silent> <leader>pm :call DoWindowSwap()<CR>
+nnoremap <silent> <leader>mp :call DoWindowSwap()<CR>
 "}}}
 " ============ TAB MANAGEMENT ============ "{{{
 " Self-Explanatory
