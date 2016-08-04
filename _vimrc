@@ -110,6 +110,19 @@ nnoremap ; :
 " ============= KEY BINDINGS ============= "{{{
 :source C:/Users/davidj/vimfiles/settings/keybindings.vim
 "}}}
+" ============ ABBREVIATIONS ============= " {{{
+" Correcting common typos
+:iab adn and
+:iab teh the
+:iab waht what
+:iab tehn then
+:iab i I
+:iab ive I've
+:iab dont don't
+:iab cant can't
+:iab havent haven't
+:iab wont won't
+"}}}
 " =========== SESSION OPTIONS ============ "{{{
 " Open session windows in the way they
 "   were left
