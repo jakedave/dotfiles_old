@@ -116,12 +116,14 @@ nnoremap ; :
 :iab teh the
 :iab waht what
 :iab tehn then
+:iab cna can
 :iab i I
 :iab ive I've
 :iab dont don't
 :iab cant can't
 :iab havent haven't
 :iab wont won't
+:iab im I'm
 "}}}
 " =========== SESSION OPTIONS ============ "{{{
 " Open session windows in the way they
